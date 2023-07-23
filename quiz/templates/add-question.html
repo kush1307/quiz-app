@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h3>Question 1: What is the capital of France?</h3>
+        <label>
+            Question
+            <textarea id="w3review" name="question_text" rows="4" cols="50" required></textarea>
+        </label>
+        <br>
+        <br>
+        <br>
+        <label>
+            <input type="text" name="option[]" required>
+            Option 1
+        </label>
+        <label>
+            <input type="checkbox" name="correct0">
+            is correct
+        </label>
+        <br>
+        <label>
+            <input type="text" name="option[]" required>
+            Option 2
+        </label>
+        <label>
+            <input type="checkbox" name="correct1">
+            is correct
+        </label>
+        <br>
+        <label>
+            <input type="text" name="option[]" required>
+            Option 3
+        </label>
+        <label>
+            <input type="checkbox" name="correct2">
+            is correct
+        </label>
+        <br>
+        <label>
+            <input type="text" name="option[]" required>
+            Option 4
+        </label>
+        <label>
+            <input type="checkbox" name="correct3">
+            is correct
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

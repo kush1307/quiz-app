@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuizHome</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    <h2>Hello Quiz World!</h2>
+
+    {% if user.is_superuser %}
+        <a href="{% url 'add-question' %}">Add Questions and Answers</a>
+    {% endif %}
+</body>
+</html>
